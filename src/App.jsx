@@ -1227,19 +1227,15 @@ function LocationSection({ today }) {
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))", gap: 32 }}>
           {/* Map */}
-          <a href="https://maps.google.com/?q=875+Milner+Ave+Unit+106+Scarborough+ON+M1B+5N6" target="_blank" rel="noopener noreferrer"
-            className={`reveal reveal-delay-1 ${vis ? "visible" : ""}`}
-            style={{
-              borderRadius: 20, overflow: "hidden", minHeight: 400, display: "flex", flexDirection: "column",
-              alignItems: "center", justifyContent: "center", textDecoration: "none", cursor: "pointer",
-              boxShadow: "0 8px 30px rgba(0,0,0,0.08)", position: "relative",
-              background: "linear-gradient(145deg, #1B4332 0%, #0D1B2A 60%, #1A1A2E 100%)",
-              transition: "transform 0.3s ease, box-shadow 0.3s ease",
-            }}
-            onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 40px rgba(0,0,0,0.15)"; }}
-            onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 8px 30px rgba(0,0,0,0.08)"; }}
-          >
-            {/* Grid
+          <div className={`reveal reveal-delay-1 ${vis ? "visible" : ""}`}
+            style={{ borderRadius: 20, overflow: "hidden", minHeight: 400, boxShadow: "0 8px 30px rgba(0,0,0,0.08)" }}>
+            <iframe
+              title="Caribbean Wave Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.5!2d-79.2322!3d43.7856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d16e8be61d1b%3A0x8e4f4a6e9a6c7d8f!2s875%20Milner%20Ave%2C%20Scarborough%2C%20ON%20M1B%205N6!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+              style={{ width: "100%", height: "100%", border: 0, minHeight: 400 }}
+              allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
 
           {/* Info */}
           <div className={`reveal reveal-delay-2 ${vis ? "visible" : ""}`}>
